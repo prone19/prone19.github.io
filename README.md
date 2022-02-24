@@ -14,8 +14,9 @@
 * [training.by](https://training.by/#!/Training/2957?lang=ru) -  epam for juniors
 
 ### Load profile
-1. [LT_Profile.pptx](https://github.com/pflb/LT_Profile)
+1. [LT_Profile](https://github.com/pflb/LT_Profile)
 2. [presentation](https://docs.google.com/presentation/d/1Vfw6_FIYxJxfsIW1-OFaj-SOmLZYUkJuM-k7wvcNhAE/edit#slide=id.g8977d36562_0_81)
+3. [self_gape_theory](theory)
 
 ### Videos
 1. [https://www.youtube.com/c/Fireship][1] - Fireship
@@ -25,6 +26,9 @@
 ### Calculator amazon/azure
 1. [http://calculator.s3.amazonaws.com/index.html][c1]
 2. [http://calculator.s3.amazonaws.com/index.html][c2]
+
+### MOCS
+1. [http://wiremock.org/docs/download-and-installation/][m1]
 
 
 [1]: https://www.youtube.com/c/Fireship
@@ -36,3 +40,5 @@
 [c1]: http://calculator.s3.amazonaws.com/index.html
 
 [c2]: http://calculator.s3.amazonaws.com/index.html
+
+[m1]: http://wiremock.org/docs/download-and-installation/
