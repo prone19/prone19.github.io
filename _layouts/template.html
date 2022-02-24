@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
+	{% for page in site.pages %}
+    <a href={{ page.filename }}>{{ page.title }}</a>
+{% endfor %}
 	<a href="jmeter" class="btn">jmeter</a>
 	<a href="monitoring" class="btn">monitoring</a>
 <h1>Hello World</h1>
