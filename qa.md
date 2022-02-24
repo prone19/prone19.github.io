@@ -1,3 +1,3 @@
 # QA theory
 
-[Back to HOME](README)
+[Back to HOME](https://prone19.github.io/)

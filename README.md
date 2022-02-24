@@ -9,9 +9,9 @@
 
 ## Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
-* https://load.qa/ \ https://github.com/qaload/qaload.github.io - Knw base from TG
-* https://github.com/aliesbelik/awesome - jmeter knw base
-* https://training.by/#!/Training/2957?lang=ru -  epam for juniors
+* [load.qa](https://load.qa/) \ [qaload.github.qa](https://github.com/qaload/qaload.github.io) - Knw base from TG
+* [github.com/aliesbelik/awesome](https://github.com/aliesbelik/awesome) - jmeter knw base
+* [training.by](https://training.by/#!/Training/2957?lang=ru) -  epam for juniors
 
 ## Load profile
 1. [LT_Profile.pptx](https://github.com/pflb/LT_Profile)
