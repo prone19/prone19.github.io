@@ -1,7 +1,7 @@
 ---
 title: PAGE TITLE HERE
 layout: template
-filename: README.md
+filename: index.md
 ---
 
 ## Welcome to GitHub Pages
