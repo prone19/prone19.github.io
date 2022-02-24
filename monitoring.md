@@ -1,7 +1,7 @@
 ---
 title: Monitoring
 layout: template
-filename: monitoring.md
+filename: monitoring
 --- 
 
 ## Welcome to GitHub Pages\

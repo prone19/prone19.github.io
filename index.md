@@ -1,7 +1,7 @@
 ---
 title: HOME
 layout: template
-filename: index.md
+filename: index
 ---
 
 ## Welcome to GitHub Pages
