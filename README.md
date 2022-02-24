@@ -1,3 +1,9 @@
+---
+title: PAGE TITLE HERE
+layout: template
+filename: README.md
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/prone19/prone19.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
