@@ -21,8 +21,10 @@
 2. [presentation](https://docs.google.com/presentation/d/1Vfw6_FIYxJxfsIW1-OFaj-SOmLZYUkJuM-k7wvcNhAE/edit#slide=id.g8977d36562_0_81)
 
 ### Videos
-1. https://www.youtube.com/c/Fireship
+1. [https://www.youtube.com/c/Fireship][21]
 2. https://www.youtube.com/user/vldcorp/videos
 3. https://www.youtube.com/c/ADVIT4000/playlists
 
 
+
+[21]: https://www.youtube.com/c/Fireship
