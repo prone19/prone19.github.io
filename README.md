@@ -2,4 +2,4 @@
 
 ### Markdown
 
-[Monitoring](monitoring.md)
+[Monitoring](monitoring)
