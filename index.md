@@ -1,5 +1,5 @@
 ---
-title: PAGE TITLE HERE
+title: HOME
 layout: template
 filename: index.md
 ---

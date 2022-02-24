@@ -1,5 +1,5 @@
 ---
-title: PAGE TITLE HERE
+title: Monitoring
 layout: template
 filename: monitoring.md
 --- 
