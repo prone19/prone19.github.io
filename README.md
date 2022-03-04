@@ -6,6 +6,7 @@
 4. [Load Profile & Perf Theory](theory)
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
+7. [k8s](k8s)
 
 ### Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
