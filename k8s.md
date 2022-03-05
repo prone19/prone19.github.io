@@ -2,6 +2,9 @@
 
 [Back to HOME](https://prone19.github.io/)
 
+### Tweaks
+[medium - autoscaling-in-kubernetes-why-doesnt-the-horizontal-pod-autoscaler-work-for-me](https://medium.com/expedia-group-tech/autoscaling-in-kubernetes-why-doesnt-the-horizontal-pod-autoscaler-work-for-me-5f0094694054)
+
 ### Basics
 Main component is a cluster:
 ![img.png](images/img.png)
