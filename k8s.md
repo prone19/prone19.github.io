@@ -18,9 +18,18 @@ Main component is a cluster:
 ![img_8.png](images/img_8.png)
 ![img_9.png](images/img_9.png)
 
+### Main objects in k8s
+![img.png](images/img_15.png)
+![img.png](images/img_14.png)
+
+
 ### Deploy k8s cluster
 ![img_10.png](images/img_10.png)
 ![img_11.png](images/img_11.png)
 
+
 ### play with kubernetes
 [https://labs.play-with-k8s.com/](https://labs.play-with-k8s.com/)
+
+### Docker images for k8s
+![img.png](images/img_12.png)
