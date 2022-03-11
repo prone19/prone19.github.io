@@ -5,17 +5,13 @@
 ### Git commands
 ```
 git branch
-git status
 git checkout master
-git status
 git checkout refactor/autoreport
-git status
 git add .
 git status
 git reset requirements.txt
 git status
 git commit -m "commn" -a
-git status
 git log
 git status
 git checkout -b
@@ -24,12 +20,10 @@ git commit -m "qwe" -a
 git checkout refactor/autoreport
 git merge --no-ff feature/text.txt
 git log
-git log
 git checkout master
 git branch -d refactor/autoreport
 git branch -D refactor/autoreport
 git branch
 git branch -D perf_autoreport
 git branch -D feature/text.txt
-git branch
 ```
