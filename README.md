@@ -7,6 +7,7 @@
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
 7. [k8s](k8s)
+8. [Git](git)
 
 ### Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
