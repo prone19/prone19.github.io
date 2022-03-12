@@ -2,7 +2,7 @@
 ## Pages
 1. [Gatling](gatling)
 2. [JMeter](jmeter)
-3. [Monitoring](monitoring)
+3. [Monitoring & Reporting](monitoring)
 4. [Load Profile & Perf Theory](theory)
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
@@ -24,6 +24,9 @@
 1. [https://www.youtube.com/c/Fireship][1] - Fireship
 2. [https://www.youtube.com/user/vldcorp/videos][2] - vldcorp
 3. [https://www.youtube.com/c/ADVIT4000/playlists][3] - ADVI, devops
+
+### Courses
+1. [AWS associate - acloudguru](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02-4KYV)
 
 ### Calculator amazon/azure
 1. [http://calculator.s3.amazonaws.com/index.html][c1]

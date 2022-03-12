@@ -40,7 +40,9 @@ Main component is a cluster:
 ### Deployments
 ![img.png](images/img_17.png)
 
-### Autoscaling
+### Autoscaling (HPA)
+[autoscaling - KEDA](https://www.haproxy.com/blog/autoscaling-with-the-haproxy-kubernetes-ingress-controller-and-keda/)
+[stackoverflow - an example HPA](https://stackoverflow.com/questions/65342926/kubernetes-autoscaler-where-should-i-specify-scaledown-and-scaleup)
 [stackoverflow - formula](https://stackoverflow.com/questions/60959284/kubernetes-deployment-not-scaling-down-even-though-usage-is-below-threshold)
 ```
 desiredReplicas = ceil[currentReplicas * ( currentMetricValue / desiredMetricValue )]
