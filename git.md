@@ -3,7 +3,7 @@
 [Back to HOME](https://prone19.github.io/)
 
 ### Git flow (sufficient)
-[habr.com/post/106912](https://habr.com/ru/post/106912/)
+[habr.com/ru/post/106912](https://habr.com/ru/post/106912/)
 
 ### Git commands
 ```
