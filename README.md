@@ -9,7 +9,7 @@
 7. [k8s](k8s)
 8. [Git](git)
 
-### Basics
+## Perf Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
 * [load.qa](https://load.qa/) \ [qaload.github.qa](https://github.com/qaload/qaload.github.io) - Knw base from TG
 * [github.com/aliesbelik/awesome](https://github.com/aliesbelik/awesome) - jmeter knw base
@@ -27,11 +27,10 @@
 
 ### Calculator amazon/azure
 1. [http://calculator.s3.amazonaws.com/index.html][c1]
-2. [http://calculator.s3.amazonaws.com/index.html][c2]
+2. [http://azure.microsoft.com/en-in/pricing/calculator][c2]
 
 ### MOCS
 1. [http://wiremock.org/docs/download-and-installation/][m1]
-
 
 [1]: https://www.youtube.com/c/Fireship
 
