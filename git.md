@@ -5,6 +5,8 @@
 ### Git flow (sufficient)
 [habr.com/ru/post/106912](https://habr.com/ru/post/106912/)
 
+### Git main theme
+
 ### Git commands
 ```
 git branch
