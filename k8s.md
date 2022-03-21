@@ -1,4 +1,4 @@
-# Perf Theory
+# K8s
 
 [Back to HOME](https://prone19.github.io/)
 
@@ -39,6 +39,12 @@ Main component is a cluster:
 
 ### Deployments
 ![img.png](images/img_17.png)
+
+### Services
+![img.png](images/img_20.png)
+
+### Ingress Controller
+![img.png](images/img_21.png)
 
 ### Autoscaling (HPA)
 [autoscaling - KEDA](https://www.haproxy.com/blog/autoscaling-with-the-haproxy-kubernetes-ingress-controller-and-keda/)
