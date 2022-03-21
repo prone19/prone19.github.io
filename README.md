@@ -2,7 +2,7 @@
 ## Pages
 1. [Gatling](gatling)
 2. [JMeter](jmeter)
-3. [Monitoring & Reporting](monitoring)
+3. [Monitoring & Reporting](monitoring/monitoring)
 4. [Load Profile & Perf Theory](theory)
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
