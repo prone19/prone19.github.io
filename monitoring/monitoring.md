@@ -3,7 +3,7 @@
 [Back to HOME](https://prone19.github.io/)
 
 ## Server Monitoring
-Is it enough to measure CPU, Memory, Disk, Network?
+[Is it enough to measure CPU, Memory, Disk, Network? - YouTube](https://www.youtube.com/watch?v=4Lm2Ee_YD0U)
 
 
 ![img.png](img.png)
