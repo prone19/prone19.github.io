@@ -9,42 +9,42 @@
 [Course ADV-IT - YouTube](https://www.youtube.com/watch?v=q_nj340pkQo&list=PLg5SS_4L6LYvN1RqaVesof8KAf-02fJSi)
 
 Main component is a cluster:
-![img.png](images/img.png)
-![img_1.png](images/img_1.png)
-![img_2.png](images/img_2.png)
-![img_3.png](images/img_3.png)
-![img_4.png](images/img_4.png)
-![img_5.png](images/img_5.png)
-![img_6.png](images/img_6.png)
-![img_7.png](images/img_7.png)
-![img_8.png](images/img_8.png)
-![img_9.png](images/img_9.png)
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+![img_9.png](img_9.png)
 
 ### Main objects in k8s
-![img.png](images/img_15.png)
-![img.png](images/img_14.png)
-![img.png](images/img_16.png)
+![img.png](img_15.png)
+![img.png](img_14.png)
+![img.png](img_16.png)
 
 
 ### Deploy k8s cluster
-![img_10.png](images/img_10.png)
-![img_11.png](images/img_11.png)
+![img_10.png](img_10.png)
+![img_11.png](img_11.png)
 
 
 ### play with kubernetes
 [https://labs.play-with-k8s.com/](https://labs.play-with-k8s.com/)
 
 ### Docker images for k8s
-![img.png](images/img_12.png)
+![img.png](img_12.png)
 
 ### Deployments
-![img.png](images/img_17.png)
+![img.png](img_17.png)
 
 ### Services
-![img.png](images/img_20.png)
+![img.png](img_20.png)
 
 ### Ingress Controller
-![img.png](images/img_21.png)
+![img.png](img_21.png)
 
 ### Autoscaling (HPA)
 [autoscaling - KEDA](https://www.haproxy.com/blog/autoscaling-with-the-haproxy-kubernetes-ingress-controller-and-keda/)

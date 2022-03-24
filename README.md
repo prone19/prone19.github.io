@@ -1,13 +1,14 @@
 # HUB
 ## Pages
 1. [Gatling](gatling)
-2. [JMeter](jmeter)
+2. [JMeter](jmeter/jmeter)
 3. [Monitoring & Reporting](monitoring/monitoring)
 4. [Load Profile & Perf Theory](theory)
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
-7. [k8s](k8s)
+7. [k8s](k8s/k8s)
 8. [Git](git)
+9. [Interview](interview/interview)
 
 ## Perf Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
