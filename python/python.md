@@ -69,6 +69,7 @@ The pop() method removes the last item in a list, but it lets you work
 with that item after removing it. The term pop comes from thinking of a 
 list as a stack of items and popping one item off the top of the stack. In
 this analogy, the top of a stack corresponds to the end of a list.
+  
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
 
@@ -79,6 +80,7 @@ print(popped_motorcycle) #  suzuki
 pop() method can be used with indexes, like pop(1) will remove the second element from a list
 
 - remove() method - use to remove by a value
+
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
 
