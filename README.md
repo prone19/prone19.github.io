@@ -9,6 +9,7 @@
 7. [k8s](k8s/k8s)
 8. [Git](git)
 9. [Interview](interview/interview)
+10. [Python](python/python)
 
 ## Perf Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG

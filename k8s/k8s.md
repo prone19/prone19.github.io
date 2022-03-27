@@ -6,7 +6,8 @@
 [medium - autoscaling-in-kubernetes-why-doesnt-the-horizontal-pod-autoscaler-work-for-me](https://medium.com/expedia-group-tech/autoscaling-in-kubernetes-why-doesnt-the-horizontal-pod-autoscaler-work-for-me-5f0094694054)
 
 ### Basics
-[Course ADV-IT - YouTube](https://www.youtube.com/watch?v=q_nj340pkQo&list=PLg5SS_4L6LYvN1RqaVesof8KAf-02fJSi)
+- [Course ADV-IT - YouTube](https://www.youtube.com/watch?v=q_nj340pkQo&list=PLg5SS_4L6LYvN1RqaVesof8KAf-02fJSi)  
+- [Habr - graceful pod stopping](https://habr.com/ru/company/vk/blog/654471/)
 
 Main component is a cluster:
 ![img.png](img.png)
