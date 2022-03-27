@@ -80,6 +80,8 @@ pop() method can be used with indexes, like pop(1) will remove the second elemen
 
 - remove() method - use to remove by a value
 ```python
+motorcycles = ['honda', 'yamaha', 'suzuki']
+
 motorcycles.remove('ducati')
 ```
 *The remove() method deletes only the first occurrence of the value you specify.*
@@ -91,7 +93,34 @@ motorcycles.remove('ducati')
   lowercase*
 - reverse() method - reverses the order of the list
 
+#### Slicing a list
+```python
+players = ['charles', 'martina', 'michael', 'florence', 'eli'] 
+print(players[0:3])
+```
 
+#### useful functions 
+min(), max(), len(), sum()  
+
+lists comprehensions
+```python
+squares = [value**2 for value in range(1, 11)]
+print(squares)
+```
+
+### Loops
+range(1,5) function in for loops will not print last value (5)  
+list
+```python
+numbers = list(range(1,12, 2)) 
+# produces even numbers
+print(numbers)
+```
+```python
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for player in players[:3]:
+ print(player.title())
+```
 
 
 
