@@ -2,7 +2,12 @@
 
 [Back to HOME](https://prone19.github.io/)
 
-##Python Crash Course notes
+## Python Crash Course notes
+### Styling - Python Enhancement Proposal (PEP)
+1. use four spaces per indentation level (use tab but the editor should make them 'spaces')
+2. lines to 80 char limit (comments to 79 char limit)
+3. 
+
 ### Strings
 ```python
 first_name = "ada"
@@ -101,6 +106,15 @@ players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3])
 ```
 
+#### Copying a list
+Use ```[:]``` slices to make a copy, because otherwise you will a new link to the same list. 
+
+```python
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+print("My favorite foods are:")
+```
+
 #### useful functions 
 min(), max(), len(), sum()  
 
@@ -124,6 +138,59 @@ for player in players[:3]:
  print(player.title())
 ```
 
+### Tuples
+Tuples - is the lists that cannot change.
+```python
+imensions = (200, 50)
+my_t = (3,) # single element tuple
+```
+### Dictionaries
+A dictionary in Python is a collection of key-value pairs  
+
+```python
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+print(alien_0['points'])
+```
+#### Assign new values to dictionary
+```python
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+```
+
+#### Modifying dictionaries
+```python
+alien_0 = {'color': 'green'}
+print(f"The alien is {alien_0['color']}.")
+
+alien_0['color'] = 'yellow'
+print(f"The alien is now {alien_0['color']}.")
+```
+It’s good practice to include a comma after the 
+last key-value pair as well, so you’re ready to add a new key-value pair on the 
+next line
+
+```python
+favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+```
+
+you can use the get() method to
+set a default value that will be returned if the requested key doesn’t exist.  
+If the key 'points' exists in the dictionary, you’ll get the corresponding value. 
+If it doesn’t, you get the default value
+```python
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'No point value assigned.')
+print(point_value)
+```
 
 
 
