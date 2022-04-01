@@ -8,6 +8,45 @@
 
 It's a scripting lang
 
+### Data structure
+Contains of multiple tables - *Stream of tables*
+
+![img_14.png](img_14.png)
+
+A table is a collection of data:
+
+| version | userID | _field | _value |
+|---------|--------|--------|--------|
+| v1      | ex123  | ex     | 1      |
+| v2      | ex123  | ex     | 3      |
+| v1      | ex123  | ex     | 4      |
+
+The tables controlled by "Group key:[]" - is a list of columns for any given table:
+```
+Group key: ["version", "userID"]
+```
+
+
+table1
+
+| version | userID | _field | _value |
+|---------|--------|--------|--------|
+| v1      | ex123  | ex     | 1      |
+| v1      | ex123  | ex     | 4      |
+
+table2
+
+| version | userID | _field | _value |
+|---------|--------|--------|--------|
+| v2      | ex123  | ex     | 3      |
+
+
+By default influx groups data by series
+![img_2.png](img_2.png)
+
+SQL - no grouping
+![img.png](img.png)
+
 ### Basic FLUX syntax
 
 `from()` to retrieve data from the data source.  
@@ -163,40 +202,3 @@ pivot is used to add _field values on each row. And then use map to compare temp
 
 sql data, using join, combining relationa and series data
 ![img_13.png](img_13.png)
-
-### Data structure
-Contains of multiple tables - *Stream of tables*
-
-A table is a collection of data:
-
-| version | userID | _field | _value |
-|---------|--------|--------|--------|
-| v1      | ex123  | ex     | 1      |
-| v2      | ex123  | ex     | 3      |
-| v1      | ex123  | ex     | 4      |
-
-The tables controlled by "Group key:[]" - is a list of columns for any given table:
-```
-Group key: ["version", "userID"]
-```
-
-
-table1  
-
-| version | userID | _field | _value |
-|---------|--------|--------|--------|
-| v1      | ex123  | ex     | 1      |
-| v1      | ex123  | ex     | 4      |
-
-table2
-
-| version | userID | _field | _value |
-|---------|--------|--------|--------|
-| v2      | ex123  | ex     | 3      |
-
-
-#### SQL comparison
-![img.png](img.png)
-
-By default influx groups data by series
-![img_2.png](img_2.png)
