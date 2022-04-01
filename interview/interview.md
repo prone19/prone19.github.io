@@ -41,7 +41,14 @@
 - grafana, datadog ~~,
 - nmon, telegraf
 - cloudwatch ~~, azure monitor ~~
-#### statistics
+#### OS
+- Win
+- linux 
+#### DB
+- MSSQL, MySQL
+#### Other
+- Elastic Search (open search) ~~
+- serverless ~~
 
 
 ### Book/Courses
@@ -59,3 +66,4 @@
 - gatling
   - course udemy
 - flux lang (not done)
+  - introduction basics

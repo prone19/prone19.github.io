@@ -10,6 +10,7 @@
 8. [Git](git)
 9. [Interview](interview/interview)
 10. [Python](python/python)
+11. [FLUX](flux/flux)
 
 ## Perf Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
