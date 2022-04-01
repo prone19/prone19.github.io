@@ -4,7 +4,7 @@
 
 ### Git flow (sufficient)
 [habr.com/ru/post/106912](https://habr.com/ru/post/106912/)
-![img](images/img_19.png)
+![img](img_19.png)
 
 ### Git main theme
 Developing new feature create a new branch from development:
