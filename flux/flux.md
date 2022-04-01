@@ -3,13 +3,18 @@
 [Back to HOME](https://prone19.github.io/)
 
 ### Requisites 
-* [Grafana + FLUX installation + dashboards](install)
+* [Grafana + FLUX installation + dashboards](./install)
+* [Get Started](https://docs.influxdata.com/flux/v0.x/get-started/)
 
 It's a scripting lang
 
 ### Basic FLUX syntax
 
-`|>` - input for next function  
+`from()` to retrieve data from the data source.  
+Pipe-forward operator `(|>)` to send the output of each function to the next function as input.  
+`range()`, `filter()`, or both to filter data based on column values.  
+`mean()` to calculate the average of values returned from the data source.  
+`yield()` to yield results to the user.  
 
 #### data types
 ![img_3.png](img_3.png) ![img_4.png](img_4.png)
