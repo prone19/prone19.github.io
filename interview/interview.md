@@ -45,13 +45,17 @@
 
 
 ### Book/Courses
-- python crush course book
+- python 
+  - crush course book
   - python stepik course
   - python autoreporting script
   - python mock (not done)
-- book system performance 2nd edition
-- perf for dummies
-- book by those guy with kittens
-- w3schools statistics (not done)
-- gatling course udemy
+- book 
+  - system performance 2nd edition
+  - perf for dummies
+- statistics 
+  - book by those guy with kittens
+  - w3schools statistics (not done)
+- gatling
+  - course udemy
 - flux lang (not done)
