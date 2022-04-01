@@ -2,7 +2,9 @@
 
 [Back to HOME](https://prone19.github.io/)
 
-## Flux:
+### Requisites 
+* [Grafana + FLUX installation + dashboards](install)
+
 It's a scripting lang
 
 ### Basic FLUX syntax
@@ -55,7 +57,10 @@ f = (t=<-) => t #doesn't do anything - take and returs data
 ![img_7.png](img_7.png)
 ^resolved to true
 
-#### Basic Query
+There are also `drop` and `keep`, `rename` functions used for dropping and keeping, renaming
+columns from your sets of data.
+
+### Basic Query
 source ---   
 `from (bucket: "system-data)`  
 or ---   
@@ -87,7 +92,7 @@ process --- evaluating a value
 |> mean()
 ```
 
-map function - like filter iterates over all rows in input data and perform some operations and returns new modified row.
+`map` function - like filter iterates over all rows in input data and perform *some operations* and returns new modified row.
 ```
 |> map(fn: (r) => ({_time: r._time, _value: r._value})) 
 # returns a table with just time and just value
@@ -125,7 +130,7 @@ data |> last()
 ![img_9.png](img_9.png)
 ![img_10.png](img_10.png)
 
-### examples
+### Examples
 ```flux
 from(bucket: "system-data")
     |> range(start: -h)
