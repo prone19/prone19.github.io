@@ -192,6 +192,28 @@ point_value = alien_0.get('points', 'No point value assigned.')
 print(point_value)
 ```
 
+In order to delete a key from the list use `del`statement:
+```python
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+```
+
+#### Looping through dictionaries
+```python
+user_0 = {
+ 'username': 'efermi',
+ 'first': 'enrico',
+ 'last': 'fermi',
+ }
+for key, value in user_0.items():
+print(f"\nKey: {key}")
+print(f"Value: {value}")
+```
+
+The `keys()` method allows looping through dictionary and show values. `dict.keys(). *But this is set by default*,
+you can add this .keys() if you need to make your code easier to read.
 
 
 
