@@ -4,7 +4,18 @@
 
 ## Server Monitoring
 [Is it enough to measure CPU, Memory, Disk, Network? - YouTube](https://www.youtube.com/watch?v=4Lm2Ee_YD0U)
+[USE method + bottlenecks - YouTube](https://www.youtube.com/watch?v=5sAPrYmuMIs)
 
+#### Analyze types
+1. workload - rt across the system (all traces)
+2. resources - often there is a lack of some resource  
+
+
+#### USE method:  
+a. utilization (high util - often means bottleneck)  
+b. saturation (overload of a resource - see LOAD average metric)  
+c. errors (func errors)  
+*First look at errors, then saturation, then utilization.*
 
 ![img.png](img.png)
 ### CPU: 
@@ -12,7 +23,14 @@
   **system**, **iowait** (useful when app works closely with disk. So high CPU - possibly leads to issues with a DISK. E.g.
   CPU user 20%, iowait 60% - there were no sufficitent number of reads), 
   **steal** (related to VMs - issues with virtuallization, possible issues with resources concurrency. In AWS example - after 
-  0.5h of tests rps is degraded, rt grows; amazon locked up to 25% cpu that you can use (25% user, 75% steal))
+  0.5h of tests rps is degraded, rt grows; amazon locked up to 25% cpu that you can use (25% user, 75% steal))  
+  
+- USE method for CPU:  
+a. util - us, sy, io, si ,st id  
+b. saturation - run_queue - lack of cores. Load average includes this run_queue  
+often 1 core is overloaded (90%+ and other cores are ~50%), look at si (interruption), if this is the case, go check 
+/proc/interrupts | tr -s ' ' | grep eth0-TxRx. All netwoork traffic processed on 0th core  
+c. errors -  
 
 load average meaning:
 it could be > 100% :)
@@ -25,7 +43,10 @@ Load Average is sticked to the number of cores. If Load Average (LA) < 16 (curre
 For e.g. if CPU around 50% but LA is high, look at io queues or wait, network and etc. 
 
 ### Memory
-* **used**, **cached**, **buffered**, **free**.
+* use method for memory:  
+  a. util - free, used, cached, buffered
+  b. saturation - swapin, swapout, page fault (means that the page was not found in RAM)  
+  c. error - malloc() errors - use jmalloc or tcalloc or increase memory  
 
 Not exactly right to look at only free memory, because apps allocate memory also for buffer and cache. And mem usage
 can grow but free memory will remain the same while buffer/cache will shrinks.
@@ -37,10 +58,20 @@ number of requests
 number of bytes  
 RT of request to disk 
 
+USE method for disk:  
+a. util - bandwidth, util, r/s, w/s  
+b. saturation - iowait, await, avgqu-sz  
+c. errors  
+
 ### Network
 Crucial to check throughput, flat line could be an issue.  
 Connections are tricky, they can be not properly reused. Connection limits sometime needs to be increased (not only 
 for load generator).
+
+USE method for network  
+  a. util - bandwidth, pcki, pcko  
+  b. saturation - overruns, dropped  
+  c. errors - retransmits  
 
 ### Linux vs Windows
 ![img_3.png](img_3.png)
@@ -129,3 +160,12 @@ Free:
 * influx, prometheus, telegraf
 * Zabbix/Nagios (rare)
 
+### Profiling Tools:
+- $ss -s  
+Potential issues with connections could be seen by $ ss -s command, time-wait means that the connections are not being
+closed.
+![img_19.png](img_19.png)
+  
+- perf, strace, blktrace, systemtap  
+e.g. sudo strace -f -c -p $(pgrep process) | magic
+![img_20.png](img_20.png)
