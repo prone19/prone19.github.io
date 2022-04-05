@@ -7,7 +7,7 @@
 5. [QA basics (manual)](qa)
 6. [Virtualization](virtualization)
 7. [k8s](k8s/k8s)
-8. [Git](git)
+8. [Git](git/git)
 9. [Interview](interview/interview)
 10. [Python](python/python)
 11. [FLUX](flux/flux)
