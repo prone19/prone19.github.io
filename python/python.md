@@ -358,6 +358,7 @@ print(user_profile)
 
 *Instantiation* - making an object from a class.
 *function in a class* - called method 
+*variables in a class* - called attributes
 
 ```python
  class Dog:     # capitalized names
@@ -376,4 +377,36 @@ print(user_profile)
     def roll_over(self):
         """Simulate rolling over in response to a command."""
         print(f"{self.name} rolled over!")
+
+my_dog = Dog('Igor', 28)  # an instance
+my_dog.sit()
 ```
+
+#### Child Class
+*child class* - called a *subclass*
+*parent class* - called a *superclass*
+
+```python
+class Car:
+  pass
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+ 
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year)    # allows to call a method from the parent class
+        self.battery_size = 75    # specific attribute for the electric cars
+
+    def describe_battery(self):     # not related to the Car class but only for electric car
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+ 
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+```
+
+You can override a method from parent class using the same name in the child one. Python will disregard the parent 
+class method and only pay attention to the method you define in the child class.
+
+------170
