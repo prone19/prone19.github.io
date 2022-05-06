@@ -11,6 +11,7 @@
 9. [Interview](interview/interview)
 10. [Python](python/python)
 11. [FLUX](flux/flux)
+12. [BigData](bd/bd)
 
 ## Perf Basics
 * [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
@@ -27,6 +28,7 @@
 1. [https://www.youtube.com/c/Fireship][1] - Fireship
 2. [https://www.youtube.com/user/vldcorp/videos][2] - vldcorp
 3. [https://www.youtube.com/c/ADVIT4000/playlists][3] - ADVI, devops
+4. [https://www.youtube.com/watch?v=FQAHDrVwfok&list=PL_mJOmq4zsHZYAyK606y7wjQtC0aoE6Es&index=5](https://www.youtube.com/watch?v=FQAHDrVwfok&list=PL_mJOmq4zsHZYAyK606y7wjQtC0aoE6Es&index=5) - ELK for beginners 
 
 ### Courses
 1. [AWS associate - acloudguru](https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c02-4KYV)
