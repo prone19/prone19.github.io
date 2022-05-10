@@ -120,6 +120,29 @@ players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3])
 ```
 
+#### split and join
+They are **string** methods, means use them for strings only.
+
+split()
+```python
+numbers = input().split()
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+```
+
+```python
+ip = '192.168.1.24'
+numbers = ip.split('.')    # define a splitter
+print(numbers)    # list
+```
+
+join()
+```python
+words = ['Python', 'is', 'the', 'most', 'powerful', 'language']
+s = ' '.join(words)    # space ' ' - will be the delimeter
+print(s)    # "Python is the most powerful language" - string
+```
+
 #### Copying a list
 Use ```[:]``` slices to make a copy, because otherwise you will a new link to the same list. 
 
