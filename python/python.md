@@ -17,6 +17,10 @@ def function_name(
     function body...
 ```
 7. separate function definitions by 2 blank lines
+8. Class names should be written in *CamelCase*, though Instance
+   and module names should be written in lowercase with underscores.  
+9. Within a class use 1 blank line between methods, and
+   within a module use 2 blank lines to separate classes
 
 ### Strings
 ```python
@@ -379,8 +383,8 @@ print(user_profile)
 
 ### Classes
 
-*Instantiation* - making an object from a class.
-*function in a class* - called method 
+*Instantiation* - making an object from a class.  
+*function in a class* - called method  
 *variables in a class* - called attributes
 
 ```python
@@ -406,10 +410,12 @@ my_dog.sit()
 ```
 
 #### Child Class
-*child class* - called a *subclass*
+*child class* - called a *subclass*  
 *parent class* - called a *superclass*
 
 ```python
+# from auto import Car as C
+
 class Car:
   pass
 
@@ -432,4 +438,95 @@ print(my_tesla.get_descriptive_name())
 You can override a method from parent class using the same name in the child one. Python will disregard the parent 
 class method and only pay attention to the method you define in the child class.
 
-------170
+### Files 
+#### Reading from file
+```python
+with open('some.txt') as f:    # 'with' opens and closes the file so no need to do it explicitly 
+    contents = f.read()        #  but the file object returned by open() is only available inside 'with'
+    # alternatively use 'contents = file_object.readlines()' - stores the file in a list
+print(contents)
+
+#######################
+filename = 'some.txt'
+
+with open(filename) as f:
+    for line in f:     # going through each line
+        print(line)
+```
+#### Writing to file
+```python
+filename = 'programming.txt'
+
+with open(filename, 'w') as f:    # r read, w write, a append, r+ open and write. No arguments means read only
+    f.write("I love programming.")
+``` 
+
+#### JSON
+```python
+import json
+numbers = [2, 3, 5, 7, 11, 13]
+
+filename = 'numbers.json'
+with open(filename, 'w') as f:
+    json.dump(numbers, f)    # pass data
+    
+###################
+import json
+filename = 'numbers.json'
+
+with open(filename) as f:
+    numbers = json.load(f)    # read data
+print(numbers)
+```
+
+
+### Exceptions
+```python
+try:
+    answer = input() / input()
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+else:
+    print(answer)    # Any code that depends on the try block executing successfully goes in the else block
+```
+```python
+filename = 'some.txt'
+try:
+    with open(filename, encoding='utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print(f"The file {filename} does not exist")
+```
+
+Use *pass* in the except block when it needs not to show an exception   
+```python
+except AnError:
+    pass
+```
+
+### Unit tests
+
+A *unit test* verifies that one specific aspect of a function’s
+behavior is correct.   
+A *test case* is a collection of unit tests that together prove
+that a function behaves as it’s supposed to.
+
+```python
+import unittest
+# from name_function import get_formatted_name importing the functions that would be tested
+def get_formatted_name():
+    pass
+
+class NamesTestCase(unittest.TestCase):
+    """Tests for 'name_function.py'."""
+ 
+def test_first_last_name(self):     # Any method that starts with test_ will be run automatically when we run the file
+    """Do names like 'Janis Joplin' work?"""
+    formatted_name = get_formatted_name('janis', 'joplin')
+    self.assertEqual(formatted_name, 'Janis Joplin')
+    
+if __name__ == '__main__':
+    unittest.main()
+```
+
+216
