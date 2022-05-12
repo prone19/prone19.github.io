@@ -12,6 +12,7 @@ ES - [https://bitnami.com/stack/elasticsearch/virtual-machine][6]
 tomcat - [https://bitnami.com/stack/tomcat/virtual-machine][7]  
 hadoop-  [https://bitnami.com/stack/hadoop/virtual-machine][8]  
 els stack - [https://bitnami.com/stack/elk/virtual-machine][9]  
+jmeter grafana docker container - [https://github.com/testsmith-io/jmeter-influxdb-grafana-docker](https://github.com/testsmith-io/jmeter-influxdb-grafana-docker)
 
 Entire list:  
 [https://bitnami.com/stacks/virtual-machine][10]
