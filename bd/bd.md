@@ -3,6 +3,8 @@
 [Back to HOME](https://prone19.github.io/)
 
 ### OpenSearch
+1. increasing performance of OpenSearch - [https://www.linkedin.com/pulse/elastic-search-performance-tuning-optimization-how-we-soumil-shah/?trk=articles_directory](https://www.linkedin.com/pulse/elastic-search-performance-tuning-optimization-how-we-soumil-shah/?trk=articles_directory)
+
 notes:
 ***ETL*** stands for **extract**, **transform**, **load** is a three-phase process where data is first extracted then transformed (cleaned, sanitized, scrubbed) and finally loaded into an output data container. The data can be collated from one or more sources and it can also be outputted to one or more destinations.
 

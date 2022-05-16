@@ -48,3 +48,41 @@ vars.put("start", formatter.format(calendar.getTime()));
 calendar.setTimeInMillis(randomTime2);
 vars.put("end", formatter.format(calendar.getTime()));
 ```
+
+swithch from a range
+```groovy
+def rnd = vars.get("rnd") as int
+
+int result = 0
+
+range = [
+	0..15,
+	15..28,
+	28..38,
+	38..47,
+	47..55,
+	55..59,
+	59..66,
+	66..69,
+	69..75,
+	75..79,
+	79..82,
+	82..85,
+	85..88,
+	88..91,
+	91..94,
+	94..97,
+	97..100
+]
+		
+for (def i = 0; i < range.size; i++) {
+	if ( rnd in range[i] ) {
+		result = i
+		break
+	}
+}
+
+vars.put("switch_value", result.toString())
+
+SampleResult.setIgnore();
+```
