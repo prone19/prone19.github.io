@@ -6,6 +6,9 @@
 ### DSL Jmeter
 https://habr.com/ru/company/otus/blog/653823/
 
+### Try/catch jmeter
+[trycatch.jmx](TryCatch.jmx)
+
 ### Groovy
 From *int* to *string*
 ```groovy
