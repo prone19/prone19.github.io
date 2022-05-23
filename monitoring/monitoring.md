@@ -6,9 +6,14 @@
 Weather example
 1. installing telegraf [instruction](configuring_telegraf.md)
 2. configs [telegraf-api-openweather.conf](telegraf-api-openweather.conf), [telegraf-plugin-openweather.conf](telegraf-plugin-openweather.conf)
+3. links
+[https://www.influxdata.com/blog/how-parse-json-telegraf-influxdb-cloud/](https://www.influxdata.com/blog/how-parse-json-telegraf-influxdb-cloud/),  
+[https://docs.influxdata.com/telegraf/v1.21/guides/using_http/](https://docs.influxdata.com/telegraf/v1.21/guides/using_http/),  
+[https://docs.influxdata.com/influxdb/v2.2/write-data/no-code/use-telegraf/manual-config/](https://docs.influxdata.com/influxdb/v2.2/write-data/no-code/use-telegraf/manual-config/),  
+[github](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/openweathermap/README.md).
 
 ## Server Monitoring
-[Is it enough to measure CPU, Memory, Disk, Network? - YouTube](https://www.youtube.com/watch?v=4Lm2Ee_YD0U)
+[Is it enough to measure CPU, Memory, Disk, Network? - YouTube](https://www.youtube.com/watch?v=4Lm2Ee_YD0U)  
 [USE method + bottlenecks - YouTube](https://www.youtube.com/watch?v=5sAPrYmuMIs)
 
 #### Analyze types
