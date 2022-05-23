@@ -2,6 +2,11 @@
 
 [Back to HOME](https://prone19.github.io/)
 
+## Telegraf 
+Weather example
+1. installing telegraf [instruction](configuring_telegraf.md)
+2. configs [telegraf-api-openweather.conf](telegraf-api-openweather.conf), [telegraf-plugin-openweather.conf](telegraf-plugin-openweather.conf)
+
 ## Server Monitoring
 [Is it enough to measure CPU, Memory, Disk, Network? - YouTube](https://www.youtube.com/watch?v=4Lm2Ee_YD0U)
 [USE method + bottlenecks - YouTube](https://www.youtube.com/watch?v=5sAPrYmuMIs)
