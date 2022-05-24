@@ -6,6 +6,7 @@
 Weather example
 1. installing telegraf [instruction](configuring_telegraf.md)
 2. configs [telegraf-api-openweather.conf](telegraf-api-openweather.conf), [telegraf-plugin-openweather.conf](telegraf-plugin-openweather.conf)
+3. dashboard [openweather-api-1653334966988.json](openweather-api-1653334966988.json)
 3. links
 [https://www.influxdata.com/blog/how-parse-json-telegraf-influxdb-cloud/](https://www.influxdata.com/blog/how-parse-json-telegraf-influxdb-cloud/),  
 [https://docs.influxdata.com/telegraf/v1.21/guides/using_http/](https://docs.influxdata.com/telegraf/v1.21/guides/using_http/),  
