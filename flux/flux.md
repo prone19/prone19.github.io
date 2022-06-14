@@ -2,6 +2,10 @@
 
 [Back to HOME](https://prone19.github.io/)
 
+### Repos
+1. [https://github.com/ushklianik/jmeter-influxdb2-grafana](https://github.com/ushklianik/jmeter-influxdb2-grafana)
+2. [https://github.com/kirillyu/jmeterReports2](https://github.com/kirillyu/jmeterReports2)
+
 ### Requisites 
 * [Grafana + FLUX installation + dashboards](./install)
 * [Get Started](https://docs.influxdata.com/flux/v0.x/get-started/)

@@ -2,12 +2,22 @@
 
 [Back to HOME](https://prone19.github.io/)
 
-#Gatling
+### Articles
+0. [https://habr.com/ru/company/tinkoff/blog/655341/](https://habr.com/ru/company/tinkoff/blog/655341/)
+1. [https://habr.com/ru/company/tinkoff/blog/655341/](https://habr.com/ru/company/tinkoff/blog/655341/) - введение в Gatling
+2. [https://habr.com/ru/company/tinkoff/blog/658479/](https://habr.com/ru/company/tinkoff/blog/658479/) - HTTP
+3. [https://habr.com/ru/company/tinkoff/blog/663718/](https://habr.com/ru/company/tinkoff/blog/663718/) - JDBC
+4. [https://habr.com/ru/company/tinkoff/blog/664674/](https://habr.com/ru/company/tinkoff/blog/664674/) - gRPC
+5. [https://habr.com/ru/company/tinkoff/blog/666886/](https://habr.com/ru/company/tinkoff/blog/666886/) - kafka
+6. [https://habr.com/ru/company/tinkoff/blog/670768/](https://habr.com/ru/company/tinkoff/blog/670768/) - AMQP
 [https://youtu.be/oyrvudL7UAg][1]  - useful video
-A great courses:  
+
+### Courses:  
 [https://www.udemy.com/course/gatling-fundamentals/][2]  
 [https://github.com/james-willett/gatling-fundamentals][3]  
 [https://www.youtube.com/channel/UCWznCtwNQeqrgZUSWss4XJw][4]
+
+### Misc
 
 Сам я работаю на связке
 Maven + Gatling  

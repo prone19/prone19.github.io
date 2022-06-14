@@ -4,7 +4,8 @@
 
 
 ### DSL Jmeter
-https://habr.com/ru/company/otus/blog/653823/
+[https://habr.com/ru/company/otus/blog/653823/](https://habr.com/ru/company/otus/blog/653823/)
+[https://abstracta.github.io/jmeter-java-dsl/](https://abstracta.github.io/jmeter-java-dsl/)
 
 ### Try/catch jmeter
 [trycatch.jmx](TryCatch.jmx)

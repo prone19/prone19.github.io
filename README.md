@@ -1,5 +1,6 @@
 # HUB
-## Pages
+# Hard
+0. [Theory](theory)
 1. [Gatling](gatling)
 2. [JMeter](jmeter/jmeter)
 3. [Monitoring & Reporting](monitoring/monitoring)
@@ -12,18 +13,14 @@
 10. [Python](python/python)
 11. [FLUX](flux/flux)
 12. [BigData](bd/bd)
+13. [Websockets](websockets/websockets)
+14. [Reporting](reporting/reporting)
 
-## Perf Basics
-* [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
-* [load.qa](https://load.qa/) \ [qaload.github.qa](https://github.com/qaload/qaload.github.io) - Knw base from TG
-* [github.com/aliesbelik/awesome](https://github.com/aliesbelik/awesome) - jmeter knw base
-* [training.by](https://training.by/#!/Training/2957?lang=ru) -  epam for juniors
+# Soft
+0. [Soft Articles](soft/soft)
+1. [minto-pyramid](https://untools.co/minto-pyramid)
 
-### Load profile
-1. [LT_Profile](https://github.com/pflb/LT_Profile)
-2. [presentation](https://docs.google.com/presentation/d/1Vfw6_FIYxJxfsIW1-OFaj-SOmLZYUkJuM-k7wvcNhAE/edit#slide=id.g8977d36562_0_81)
-3. [self_gape_theory](theory)
-
+# DEVOPS
 ### Videos
 1. [https://www.youtube.com/c/Fireship][1] - Fireship
 2. [https://www.youtube.com/user/vldcorp/videos][2] - vldcorp
@@ -36,6 +33,10 @@
 ### Calculator amazon/azure
 1. [http://calculator.s3.amazonaws.com/index.html][c1]
 2. [http://azure.microsoft.com/en-in/pricing/calculator][c2]
+
+### Traffic generator
+1. [https://github.com/cisco-system-traffic-generator/trex-stateless-gui](https://github.com/cisco-system-traffic-generator/trex-stateless-gui)
+2. 
 
 ### MOCS
 1. [http://wiremock.org/docs/download-and-installation/][m1]

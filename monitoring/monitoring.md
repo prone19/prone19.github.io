@@ -1,4 +1,4 @@
-# Monitoring & Reporting
+# Monitoring
 
 [Back to HOME](https://prone19.github.io/)
 

@@ -2,8 +2,21 @@
 
 [Back to HOME](https://prone19.github.io/)
 
+## Perf Basics
+* [perf_from_scratch.pptx](assets/perf_from_scratch.pptx) - basics from TG
+* [load.qa](https://load.qa/) \ [qaload.github.qa](https://github.com/qaload/qaload.github.io) - Knw base from TG
+* [github.com/aliesbelik/awesome](https://github.com/aliesbelik/awesome) - jmeter knw base
+* [training.by](https://training.by/#!/Training/2957?lang=ru) -  epam for juniors
+
+### Load profile
+1. [LT_Profile](https://github.com/pflb/LT_Profile)
+2. [presentation](https://docs.google.com/presentation/d/1Vfw6_FIYxJxfsIW1-OFaj-SOmLZYUkJuM-k7wvcNhAE/edit#slide=id.g8977d36562_0_81)
+3. [true approach to make load profile](https://sqadays.com/ru/talk/52678)
+
+### Analysis
+1. [https://habr.com/ru/company/tinkoff/blog/514314/](https://habr.com/ru/company/tinkoff/blog/514314/)
+
 ### Metrics
-Metrics from indian guy  
 Setup Server Side Monitoring(for Web and APP servers) with following metrics  
 1. CPU utilization
 2. Memory utilization
