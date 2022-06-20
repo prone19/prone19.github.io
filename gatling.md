@@ -12,6 +12,9 @@
 6. [https://habr.com/ru/company/tinkoff/blog/670768/](https://habr.com/ru/company/tinkoff/blog/670768/) - AMQP
 [https://youtu.be/oyrvudL7UAg][1]  - useful video
 
+### grpc
+1. [https://habr.com/ru/company/tinkoff/blog/664674/](https://habr.com/ru/company/tinkoff/blog/664674/)
+
 ### Courses:  
 [https://www.udemy.com/course/gatling-fundamentals/][2]  
 [https://github.com/james-willett/gatling-fundamentals][3]  

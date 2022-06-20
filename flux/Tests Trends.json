@@ -1,0 +1,2026 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Overall views on test with links",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 4,
+  "iteration": 1655308923005,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "$data_source",
+      "description": "All tests without filters",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "displayMode": "auto",
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "avg"
+            },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "gradient-gauge"
+              },
+              {
+                "id": "displayName",
+                "value": "Total avg time"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "super-light-orange",
+                      "value": 250
+                    },
+                    {
+                      "color": "#EAB839",
+                      "value": 500
+                    },
+                    {
+                      "color": "#EF843C",
+                      "value": 750
+                    },
+                    {
+                      "color": "red",
+                      "value": 1000
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 1500
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "max",
+                "value": 2000
+              },
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "time_spent"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "s"
+              },
+              {
+                "id": "displayName",
+                "value": "Test duration"
+              },
+              {
+                "id": "decimals",
+                "value": 1
+              },
+              {
+                "id": "custom.width",
+                "value": 100
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Errors%"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "percentunit"
+              },
+              {
+                "id": "decimals",
+                "value": 3
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-text"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "super-light-yellow",
+                      "value": 0.01
+                    },
+                    {
+                      "color": "#EAB839",
+                      "value": 0.05
+                    },
+                    {
+                      "color": "red",
+                      "value": 0.1
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 138
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "99%"
+            },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "gradient-gauge"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "super-light-yellow",
+                      "value": 500
+                    },
+                    {
+                      "color": "yellow",
+                      "value": 1000
+                    },
+                    {
+                      "color": "orange",
+                      "value": 2000
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": 3000
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 218
+              },
+              {
+                "id": "max",
+                "value": 3500
+              },
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "testRun"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "targetBlank": true,
+                    "title": "go to",
+                    "url": "./d/LeWVcwrZk_new/test-metrics-new?from=${__data.fields.time_start}&to=${__data.fields.time_end}&var-project=${__data.fields.application}&var-limit=100&var-run=${__data.fields.testRun}&var-type=${type}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/time_end|time_start/"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "avg"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 320
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "time_end"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "99%"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 320
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "application"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "targetBlank": true,
+                    "title": "go to",
+                    "url": "./d/LeWVcwrZk_new/test-metrics-new?from=${__data.fields.time_start}&to=${__data.fields.time_end}&var-project=${__data.fields.application}&var-limit=100&var-run=${__data.fields.testRun}&var-type=${type}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 43,
+      "options": {
+        "frameIndex": 1,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "\r\nimport \"experimental\"\r\n\r\nstartlist = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"events\" and r[\"_value\"]=~/.*started.*/)\r\n  |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"testRun\",\"_time\"])\r\n\r\n  \r\n\r\n\r\nFinalOutput = [\"_field\", \"_time\", \"_value\"]\r\n\r\nmetrics = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"transaction\"] == \"all\")\r\n\r\n\r\n\r\nout4 = metrics |> filter(fn: (r) =>  r[\"_field\"] == \"avg\" and r[\"statut\"] == \"all\")\r\n  |> mean()\r\n  |> toInt()\r\n  |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"_time\",\"testRun\",\"_value\",\"application\"])\r\n\r\n\r\n\r\nout5 = metrics |> filter(fn: (r) =>  r[\"_field\"] == \"pct99.0\" and r[\"statut\"] == \"all\")\r\n  |> mean()\r\n    |> toInt()\r\n    |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"_time\",\"testRun\",\"_value\",\"application\"])\r\n\r\n\r\nout6 = metrics |> filter(fn: (r) =>  r[\"_field\"] == \"avg\" and r[\"statut\"] == \"all\")\r\n  |> count()\r\n    |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"_time\",\"testRun\",\"_value\",\"application\"])\r\n\r\ncount1 = metrics |> filter(fn: (r) => r[\"statut\"] == \"all\" and  r[\"_field\"] == \"count\")\r\n |> sum()\r\n   |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"_time\",\"testRun\",\"_value\",\"application\"])\r\n\r\n\r\nerror1 = metrics |> filter(fn: (r) => r[\"statut\"] == \"all\" and r[\"_field\"] == \"countError\")\r\n |> sum()\r\n   |> group(columns: [\"_start\"])\r\n  |> keep(columns:[\"_time\",\"testRun\",\"_value\",\"application\"])\r\n\r\nerrors = join(\r\n  tables: {count1:count1, error1:error1},\r\n  on: [\"testRun\"]\r\n)\r\n    |> map(fn: (r) => ({\r\n      errors: r._value_error1 / r._value_count1,\r\n      testRun: r.testRun,\r\n      application: r.application\r\n    })\r\n  )\r\n\r\n\r\nfirst = join(tables:{out4:out4, out5:out5}, on:[\"testRun\"])\r\n|> map(fn: (r) => ({\r\n      avg: r._value_out4 ,\r\n      pct: r._value_out5,\r\n      testRun: r.testRun,\r\n      application: r.application\r\n    })\r\n  )\r\n\r\nsecond = join(tables:{out6:out6, errors:errors}, on:[\"testRun\"])\r\n |> map(fn: (r) => ({\r\n      time_spent: r._value*5 ,\r\n      errors: r.errors,\r\n      testRun: r.testRun,\r\n      application: r.application\r\n    })\r\n  )\r\n\r\nthird = join(tables:{first:first, second:second}, on:[\"testRun\"])\r\n\r\n\r\n\r\nfourth = join(tables:{startlist:startlist, third:third}, on:[\"testRun\"])\r\n |> map(fn: (r) => ({\r\n      time_spent: r.time_spent,\r\n      errors: r.errors,\r\n      testRun: r.testRun,\r\n      avg: r.avg,\r\n      pct: r.pct,\r\n      application: r.application,\r\n      time_start: int (v:uint(v:r._time)) / 1000000,\r\n      time_end: int (v:uint(v:experimental.addDuration(       \r\n        d: duration(v: r.time_spent*1000000000),\r\n        to: r._time,\r\n    )))/1000000\r\n    })\r\n  )\r\n|> sort(columns:[\"time_start\"], desc : true)\r\n|> yield()",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "All tests with links",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "_time": false,
+              "application": false,
+              "avg": false,
+              "errors": false,
+              "pct": false,
+              "testRun": false,
+              "time_end": false,
+              "time_spent": false,
+              "time_start": false
+            },
+            "indexByName": {
+              "application": 0,
+              "avg": 2,
+              "errors": 4,
+              "pct": 3,
+              "testRun": 1,
+              "time_end": 6,
+              "time_spent": 5,
+              "time_start": 7
+            },
+            "renameByName": {
+              "avg": "",
+              "errors": "Errors%",
+              "pct": "99%",
+              "testRun": "",
+              "time_spent": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 41,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "$data_source",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {}
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/RPS_1/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "RPS_old"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/Errors_1/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Errors_old"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/maxAT_1/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Threads_old"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/pct90.0_1/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "90%_old"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/pct90.0_2/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "90%_new"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/RPS_2/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "RPS_new"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/maxAT_2/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Threads_new"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/Errors_2/"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "Errors_new"
+                  }
+                ]
+              }
+            ]
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 12,
+            "w": 24,
+            "x": 0,
+            "y": 13
+          },
+          "hiddenSeries": false,
+          "id": 39,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "maxDataPoints": 10000,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.3.7",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:286",
+              "alias": "RPS_new",
+              "color": "rgb(0, 196, 240)",
+              "linewidth": 2,
+              "zindex": 3
+            },
+            {
+              "$$hashKey": "object:369",
+              "alias": "Errors_new",
+              "color": "#E02F44",
+              "fill": 5,
+              "linewidth": 3,
+              "transform": "negative-Y"
+            },
+            {
+              "$$hashKey": "object:377",
+              "alias": "Threads_new",
+              "color": "#8F3BB8",
+              "dashes": true,
+              "fill": 0,
+              "fillGradient": 0,
+              "linewidth": 2,
+              "zindex": -2
+            },
+            {
+              "$$hashKey": "object:715",
+              "alias": "90%_old",
+              "color": "#C8F2C2",
+              "fill": 5,
+              "transform": "negative-Y",
+              "yaxis": 2,
+              "zindex": -3
+            },
+            {
+              "$$hashKey": "object:621",
+              "alias": "90%_new",
+              "color": "#37872D",
+              "fill": 5,
+              "transform": "negative-Y",
+              "yaxis": 2,
+              "zindex": -3
+            },
+            {
+              "$$hashKey": "object:639",
+              "alias": "Threads_old",
+              "color": "#CA95E5",
+              "dashes": true,
+              "fill": 0,
+              "fillGradient": 0,
+              "linewidth": 2,
+              "zindex": -2
+            },
+            {
+              "$$hashKey": "object:725",
+              "alias": "RPS_old",
+              "color": "#8AB8FF",
+              "linewidth": 2,
+              "zindex": 3
+            },
+            {
+              "$$hashKey": "object:765",
+              "alias": "Errors_old",
+              "color": "#FF7383",
+              "fill": 5,
+              "linewidth": 3,
+              "transform": "negative-Y"
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"experimental\"\n\nadjustment = experimental.addDuration(d: ${adjustment}, to: ${old_test})\n\ntime1 = uint(v: adjustment)\ntime2 = uint(v: ${new_test})\ntime3 = experimental.subDuration(d: 2h, from: ${old_test})\ntime4 = experimental.addDuration(d: 4h, to:   ${old_test})\n\ndiff = duration(v: time2 - time1)\n\n\na=from(bucket: v.bucket)\n  |> range(start: time3, stop: time4)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${old_test}\" and r[\"transaction\"] == \"all\" and  r[\"_field\"] == \"count\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value) / ${send_interval}\n  })\n)\n\n  |> set(key: \"_field\", value: \"RPS_1\")\n  |> aggregateWindow(every: ${send_interval}s, fn: mean, createEmpty: false)\n  |> timeShift(duration: diff)\n\nb = from(bucket: v.bucket)\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"] == \"${new_test}\" and r[\"transaction\"] == \"all\" and  r[\"_field\"] == \"count\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value) / ${send_interval}\n  })\n)\n  |> set(key: \"_field\", value: \"RPS_2\")\n  |> aggregateWindow(every: ${send_interval}s, fn: mean, createEmpty: false)\n\n\nunion(tables: [a, b])",
+              "refId": "E",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            },
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"experimental\"\n\nadjustment = experimental.addDuration(d: ${adjustment}, to: ${old_test})\n\ntime1 = uint(v: adjustment)\ntime2 = uint(v: ${new_test})\ntime3 = experimental.subDuration(d: 2h, from: ${old_test})\ntime4 = experimental.addDuration(d: 4h, to:   ${old_test})\n\ndiff = duration(v: time2 - time1)\n\na = from(bucket: \"jmeter\")\n  |> range(start: time3, stop: time4)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${old_test}\" and r[\"transaction\"] == \"all\")\n  |> filter(fn: (r) =>  r[\"_field\"] == \"countError\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value) / ${send_interval}\n  })\n)\n  |> set(key: \"_field\", value: \"Errors_1\")\n  |> aggregateWindow(every: 10s, fn: mean)\n  |> timeShift(duration: diff)\n\nb = from(bucket: \"jmeter\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${new_test}\"  and r[\"transaction\"] == \"all\")\n\n  |> filter(fn: (r) =>  r[\"_field\"] == \"countError\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value) / ${send_interval}\n  })\n)\n  |> set(key: \"_field\", value: \"Errors_2\")\n  |> aggregateWindow(every: 10s, fn: mean)\n\nunion(tables: [a, b])",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            },
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"experimental\"\n\nadjustment = experimental.addDuration(d: ${adjustment}, to: ${old_test})\n\ntime1 = uint(v: adjustment)\ntime2 = uint(v: ${new_test})\ntime3 = experimental.subDuration(d: 2h, from: ${old_test})\ntime4 = experimental.addDuration(d: 4h, to:   ${old_test})\n\ndiff = duration(v: time2 - time1)\n\na = from(bucket: \"jmeter\")\n  |> range(start: time3, stop: time4)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${old_test}\")\n  |> filter(fn: (r) => r[\"_field\"] == \"maxAT\")\n  |> set(key: \"_field\", value: \"maxAT_1\")\n  |> aggregateWindow(every: 10s, fn: mean)\n\n  |> timeShift(duration: diff)\n\nb = from(bucket: \"jmeter\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${new_test}\")\n  |> filter(fn: (r) => r[\"_field\"] == \"maxAT\")\n    |> set(key: \"_field\", value: \"maxAT_2\")\n  |> aggregateWindow(every: 10s, fn: mean)\n  \n\nunion(tables: [a, b])\n",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            },
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"experimental\"\n\nadjustment = experimental.addDuration(d: ${adjustment}, to: ${old_test})\n\ntime1 = uint(v: adjustment)\ntime2 = uint(v: ${new_test})\ntime3 = experimental.subDuration(d: 2h, from: ${old_test})\ntime4 = experimental.addDuration(d: 4h, to:   ${old_test})\n\ndiff = duration(v: time2 - time1)\n\nFinalOutput = [\"_field\", \"_time\", \"_value\"]\n\na = from(bucket: \"jmeter\")\n  |> range(start: time3, stop: time4)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${old_test}\" and r[\"transaction\"] == \"all\")\n\n  |> filter(fn: (r) =>  r[\"_field\"] == \"pct90.0\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value),\n  })\n)\n  |> aggregateWindow(every: 10s, fn: mean)\n  |> set(key: \"_field\", value: \"pct90.0_1\")\n  |> timeShift(duration: diff)\n  |> yield(name: \"pct90.0_1\")\n\n\nb = from(bucket: \"jmeter\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${new_test}\" and r[\"transaction\"] == \"all\")\n\n  |> filter(fn: (r) =>  r[\"_field\"] == \"pct90.0\" and r[\"statut\"] == \"all\")\n  |> map(fn: (r) => ({\n    r with\n    _value: int(v: r._value),\n  })\n)\n  |> aggregateWindow(every: 10s, fn: mean)\n  |> set(key: \"_field\", value: \"pct90.0_2\")\n  |> yield(name: \"pct90.0_2\")\n\n",
+              "refId": "C",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "RPS/Erros/Threads/Respose Time 90%",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:188",
+              "format": "none",
+              "label": "<--Errors  // 90%% | RPS | Thread-->",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:189",
+              "format": "ms",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": true,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": "$data_source",
+          "description": "${old_test} - ${new_test} ",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {
+                "align": "left",
+                "displayMode": "auto",
+                "filterable": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/(min|average time|90%%|95%%|99%%|max)/"
+                },
+                "properties": [
+                  {
+                    "id": "unit",
+                    "value": "ms"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "top rps"
+                },
+                "properties": [
+                  {
+                    "id": "unit",
+                    "value": "ops"
+                  },
+                  {
+                    "id": "custom.width",
+                    "value": 153
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "% Error"
+                },
+                "properties": [
+                  {
+                    "id": "unit",
+                    "value": "percentunit"
+                  },
+                  {
+                    "id": "custom.displayMode",
+                    "value": "lcd-gauge"
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "mode": "continuous-GrYlRd"
+                    }
+                  },
+                  {
+                    "id": "decimals",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "transaction"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 288
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "average time"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 166
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": "/^(?!transaction|count|top rps).*$/"
+                },
+                "properties": [
+                  {
+                    "id": "custom.displayMode",
+                    "value": "color-background"
+                  },
+                  {
+                    "id": "thresholds",
+                    "value": {
+                      "mode": "absolute",
+                      "steps": [
+                        {
+                          "color": "green",
+                          "value": null
+                        },
+                        {
+                          "color": "red",
+                          "value": -10000
+                        },
+                        {
+                          "color": "green",
+                          "value": 0
+                        },
+                        {
+                          "color": "green",
+                          "value": 10000
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "top rps"
+                },
+                "properties": [
+                  {
+                    "id": "custom.displayMode",
+                    "value": "color-background"
+                  },
+                  {
+                    "id": "thresholds",
+                    "value": {
+                      "mode": "absolute",
+                      "steps": [
+                        {
+                          "color": "green",
+                          "value": null
+                        },
+                        {
+                          "color": "green",
+                          "value": -10010.0001
+                        },
+                        {
+                          "color": "red",
+                          "value": 0
+                        },
+                        {
+                          "color": "red",
+                          "value": 10000.0001
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 11,
+            "w": 24,
+            "x": 0,
+            "y": 25
+          },
+          "id": 34,
+          "options": {
+            "frameIndex": 25,
+            "showHeader": true,
+            "sortBy": []
+          },
+          "pluginVersion": "7.3.7",
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"experimental\"\r\n\r\nadjustment = experimental.addDuration(d: ${adjustment}, to: ${old_test})\r\n\r\ntime1 = uint(v: adjustment)\r\ntime2 = uint(v: ${new_test})\r\ntime3 = experimental.subDuration(d: 2h, from: ${old_test})\r\ntime4 = experimental.addDuration(d: 4h, to:   ${old_test})\r\n\r\ndiff = duration(v: time2 - time1)\r\n\r\n\r\na = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${new_test}\" )\r\n\r\nout1 = a |> filter(fn: (r) =>  (r[\"_field\"] == \"count\" or r[\"_field\"] == \"countError\") and r[\"statut\"] == \"all\")\r\n  |> sum()\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n\r\n\r\n\r\nout2 = a |> filter(fn: (r) =>  (r[\"_field\"] != \"count\" and  r[\"_field\"] != \"countError\") and r[\"statut\"] == \"all\")\r\n  |> group(columns: [\"_field\",\"transaction\"])\r\n  |> mean()\r\n\r\n\r\n\r\nout3 = a |> filter(fn: (r) =>  r[\"_field\"] == \"count\" and r[\"statut\"] == \"ko\")\r\n  |> sum()\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n  |> set(key: \"_field\", value: \"error\")\r\n\r\n\r\n  \r\nout4 = a |> filter(fn: (r) =>  r[\"_field\"] == \"count\" and r[\"statut\"] == \"all\")\r\n  |> map(fn: (r) => ({\r\n    r with\r\n    _value: float(v: r._value) / 5.0\r\n  })\r\n)\r\n  |> top(n:15)\r\n  |> quantile(q: 0.5, method: \"exact_selector\")\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n  |> set(key: \"_field\", value: \"rps\")\r\n\r\n\r\nb = from(bucket: \"jmeter\")\r\n  |> range(start: time3, stop: time4)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"testRun\"]== \"${old_test}\" )\r\n\r\nout1b = b |> filter(fn: (r) =>  (r[\"_field\"] == \"count\" or r[\"_field\"] == \"countError\") and r[\"statut\"] == \"all\")\r\n  |> sum()\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n\r\n\r\nout2b = b |> filter(fn: (r) =>  (r[\"_field\"] != \"count\" and  r[\"_field\"] != \"countError\") and r[\"statut\"] == \"all\")\r\n  |> group(columns: [\"_field\",\"transaction\"])\r\n  |> mean()\r\n\r\nout3b = b |> filter(fn: (r) =>  r[\"_field\"] == \"count\" and r[\"statut\"] == \"ko\")\r\n  |> sum()\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n  |> set(key: \"_field\", value: \"error\")\r\n\r\nout4b = b |> filter(fn: (r) =>  r[\"_field\"] == \"count\" and r[\"statut\"] == \"all\")\r\n  |> map(fn: (r) => ({\r\n    r with\r\n    _value: float(v: r._value) / 5.0\r\n  })\r\n)\r\n  |> top(n:15)\r\n  |> quantile(q: 0.5, method: \"exact_selector\")\r\n  |> group(columns: [\"_field\", \"transaction\"])\r\n  |> set(key: \"_field\", value: \"rps\")\r\n\r\noutputb = union (tables: [out1b,out2b, out3b,out4b]) \r\n |> pivot(\r\n    rowKey:[\"transaction\"],\r\n    columnKey: [\"_field\"],\r\n    valueColumn: \"_value\"\r\n  )\r\n |> map(fn: (r) => ({\r\n    r with\r\n    errors_total: if not exists r.error and not exists r.countError then 0.0\r\n    else if exists r.error then r.error\r\n    else if exists r.countError then r.countError\r\n    else 0.0\r\n  })\r\n)\r\n\r\noutput = union (tables: [out1,out2, out3,out4]) \r\n \r\n |> pivot(\r\n    rowKey:[\"transaction\"],\r\n    columnKey: [\"_field\"],\r\n    valueColumn: \"_value\"\r\n  )\r\n   |> map(fn: (r) => ({\r\n    r with\r\n    errors_total: if not exists r.error and not exists r.countError then 0.0\r\n    else if exists r.error then r.error\r\n    else if exists r.countError then r.countError\r\n    else 0.0\r\n  })\r\n)\r\n\r\n \r\n  \r\nfo = join(tables: {b1: outputb, a1: output}, on: [\"transaction\"])\r\n|> map(fn: (r) => ({\r\n    r with\r\n    avg: r.avg_b1-r.avg_a1,\r\n    count: r.count_b1 - r.count_a1,\r\n    errors_total: r.errors_total_b1 - r.errors_total_a1,\r\n    hit: r.hit_b1 - r.hit_a1,\r\n    max: r.max_b1 - r.max_a1,\r\n    min: r.min_b1 - r.min_a1,\r\n    pct90: r[\"pct90.0_b1\"] - r[\"pct90.0_a1\"],\r\n    pct95: r[\"pct95.0_b1\"] - r[\"pct95.0_a1\"],\r\n    pct99: r[\"pct99.0_b1\"] - r[\"pct99.0_a1\"],\r\n    rb: r.rb_b1 - r.rb_a1,\r\n    rps: r.rps_b1 - r.rps_a1,\r\n    sb: r.sb_b1 - r.sb_a1,\r\n  })\r\n)\r\n |> keep(columns:[\"transaction\",\"avg\",\"count\",\"hit\",\"max\",\"min\",\"pct90\",\"pct95\",\"pct99\",\"rps\",\"rb\",\"sb\"]) \r\n |> yield()",
+              "rawQuery": true,
+              "refId": "A",
+              "resultFormat": "table",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Metrics Diff | Old - New ",
+          "transformations": [
+            {
+              "id": "labelsToFields",
+              "options": {}
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "hit": true,
+                  "rb": true,
+                  "sb": true
+                },
+                "indexByName": {
+                  "avg": 2,
+                  "count": 1,
+                  "hit": 6,
+                  "max": 7,
+                  "min": 8,
+                  "pct90": 3,
+                  "pct95": 4,
+                  "pct99": 5,
+                  "rb": 9,
+                  "rps": 10,
+                  "sb": 11,
+                  "transaction": 0
+                },
+                "renameByName": {
+                  "avg": "average time",
+                  "pct90": "90%%",
+                  "pct95": "95%%",
+                  "pct99": "99%%",
+                  "rps": "top rps"
+                }
+              }
+            }
+          ],
+          "type": "table"
+        }
+      ],
+      "title": "Compare 2 tests",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 21,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "$data_source",
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {}
+            },
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 13,
+            "w": 24,
+            "x": 0,
+            "y": 14
+          },
+          "hiddenSeries": false,
+          "id": 27,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 1,
+          "nullPointMode": "connected",
+          "options": {
+            "alertThreshold": false
+          },
+          "percentage": false,
+          "pluginVersion": "7.3.7",
+          "pointradius": 3,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:744",
+              "alias": "/&nbsp;.*/",
+              "bars": false,
+              "color": "#C4162A",
+              "dashLength": 2,
+              "fill": 10,
+              "fillBelowTo": "&amp;nbsp;",
+              "fillGradient": 10,
+              "hideTooltip": true,
+              "legend": false,
+              "lines": true,
+              "linewidth": 5,
+              "spaceLength": 2,
+              "stack": "B",
+              "steppedLine": true,
+              "transform": "constant",
+              "zindex": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"strings\"\r\nimport \"regexp\"\r\n\r\nFinalOutput = [\"_field\", \"_time\", \"_value\"]\r\n\r\nstartlist = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"statut\"] == \"all\" and r[\"transaction\"] == \"all\" and r[\"testRun\"] =~ /${cur_tests:pipe}/)\r\n\r\na = startlist |> filter(fn: (r) => r[\"_field\"] == \"count\")\r\n  |> sort(columns: [\"_value\"], desc:true)\r\n  |> map(fn: (r) => ({\r\n    r with\r\n    _value: float(v: r._value) / 5.0,\r\n    _time:r._time, \r\n  new_tag:\r\n      if regexp.findString(r: /\\S+?$/, v: r.testRun) == \"10\" then regexp.findString(r: /^\\S+?/, v: r.testRun)\r\n      else regexp.findString(r: /^\\S+?\\s/, v: r.testRun) + \"<br>\"  + regexp.findString(r: /\\S+?$$/, v: r.testRun)\r\n    })\r\n  )\r\n  |> top(n:10)\r\n  |> quantile(q: 0.9, method: \"exact_selector\")\r\n  |> set(key: \"_field\", value: \"rps\")\r\n  |> group(columns: [\"testRun\",\"_time\"])\r\n  |> sort(columns: [\"_start\",\"testRun\"])\r\n   |> pivot(\r\n    rowKey:[\"_field\"],\r\n    columnKey: [\"new_tag\"],\r\n    valueColumn: \"_value\"\r\n  )\r\n\r\n |> yield()\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Load Trend ${test} rps ",
+          "tooltip": {
+            "shared": true,
+            "sort": 1,
+            "value_type": "individual"
+          },
+          "transformations": [],
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "series",
+            "name": null,
+            "show": true,
+            "values": [
+              "total"
+            ]
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:779",
+              "decimals": null,
+              "format": "none",
+              "label": "rps",
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "$$hashKey": "object:780",
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "$data_source",
+          "description": "Red line based on PCT90_AVG_PROJ - you can replace in by your query in variables. I request it from production (90 percetille responses)",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {}
+            },
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 13,
+            "w": 24,
+            "x": 0,
+            "y": 27
+          },
+          "hiddenSeries": false,
+          "id": 28,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 1,
+          "nullPointMode": "connected",
+          "options": {
+            "alertThreshold": false
+          },
+          "percentage": false,
+          "pluginVersion": "7.3.7",
+          "pointradius": 3,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:1492",
+              "alias": "/&nbsp;.*/",
+              "bars": false,
+              "color": "#C4162A",
+              "dashLength": 2,
+              "fill": 10,
+              "fillBelowTo": "&amp;nbsp;",
+              "fillGradient": 10,
+              "hideTooltip": true,
+              "legend": false,
+              "lines": true,
+              "linewidth": 5,
+              "spaceLength": 2,
+              "stack": "B",
+              "steppedLine": true,
+              "transform": "constant",
+              "zindex": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"strings\"\r\nimport \"regexp\"\r\nFinalOutput = [\"_field\", \"_time\", \"_value\"]\r\n\r\n\r\nstartlist = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"statut\"] == \"all\" and r[\"transaction\"] == \"all\" and r[\"testRun\"] =~ /${cur_tests:pipe}/)\r\n\r\n  \r\na = startlist |> filter(fn: (r) =>  r[\"_field\"] == \"pct90.0\")\r\n\r\n  |> map(fn: (r) => ({\r\n    r with\r\n    _value: r._value,\r\n    _time: r._time,\r\n    new_tag:\r\n      if regexp.findString(r: /\\S+?$/, v: r.testRun) == \"10\" then regexp.findString(r: /^\\S+?/, v: r.testRun)\r\n      else regexp.findString(r: /^\\S+?\\s/, v: r.testRun) + \"<br>\"  + regexp.findString(r: /\\S+?$$/, v: r.testRun)\r\n    })\r\n    )\r\n   |> pivot(\r\n    rowKey:[\"_field\"],\r\n    columnKey: [\"new_tag\"],\r\n    valueColumn: \"_value\"\r\n  )\r\n\r\n  |> yield()",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Load Trend ${test} 90 percentile",
+          "tooltip": {
+            "shared": true,
+            "sort": 1,
+            "value_type": "individual"
+          },
+          "transformations": [],
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "series",
+            "name": null,
+            "show": true,
+            "values": [
+              "total"
+            ]
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:1527",
+              "format": "ms",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:1528",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "$data_source",
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "custom": {}
+            },
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 12,
+            "w": 24,
+            "x": 0,
+            "y": 40
+          },
+          "hiddenSeries": false,
+          "id": 30,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.3.7",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "orderByTime": "ASC",
+              "policy": "default",
+              "query": "import \"strings\"\r\nimport \"regexp\"\r\nFinalOutput = [\"_field\", \"_time\", \"_value\"]\r\n\r\n \r\na = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"statut\"] == \"all\" and r[\"transaction\"] == \"all\" and r[\"testRun\"] =~ /${cur_tests:pipe}/)\r\nc = a\r\n    |> filter(fn: (r) => r[\"_field\"] == \"avg\")     \r\nb = a\r\n    |> filter(fn: (r) => r[\"_field\"] == \"count\")   \r\n\t\r\ntotal = join(tables: {c:c, b:b},\r\n  on: [\"_time\",\"transaction\",\"testRun\"])\r\n     |> group(columns: [\"_time\",\"transaction\",\"testRun\"])\r\n     |> reduce(fn: (r, accumulator) => ({\r\n      tolerance_count: if r._value_c<${apdex}/3 then accumulator.tolerance_count + r._value_b\r\n      else accumulator.tolerance_count,\r\n      untolerance_count: if r._value_c>${apdex}/3 and r._value_c<${apdex} then accumulator.untolerance_count + r._value_b\r\n      else accumulator.untolerance_count,\r\n      total: accumulator.total + r._value_b,\r\n    }),\r\n    identity: {tolerance_count: 0.0, untolerance_count: 0.0, total: 0.0}\r\n  )\r\n    |> map(fn: (r) => ({\r\n      r with\r\n      _time: r._time,\r\n      transaction: r.transaction,\r\n      tolerance_count: r.tolerance_count,\r\n      untolerance_count: r.untolerance_count,\r\n      total: r.total,\r\n      testRun:\r\n      if regexp.findString(r: /\\S+?$/, v: r.testRun) == \"10\" then regexp.findString(r: /^\\S+?/, v: r.testRun)\r\n      else regexp.findString(r: /^\\S+?\\s/, v: r.testRun) + \"<br>\"  + regexp.findString(r: /\\S+?$$/, v: r.testRun)\r\n    })\r\n  )\r\n    |> group(columns: [\"transaction\",\"testRun\"])\r\n\r\n\r\ntag_time = total \r\n  |> last(column: \"_time\")  \r\n  |>keep(columns: [\"_time\",\"testRun\",\"transaction\"])\r\ntolerance = total\r\n    |> sum(column: \"tolerance_count\")\r\nuntolerance = total\r\n     |> sum(column: \"untolerance_count\")\r\nall  = total\r\n    |> sum(column:\"total\")\r\nresult = join(tables: {tolerance:tolerance, untolerance:untolerance},\r\n  on: [\"transaction\",\"testRun\"])\r\nresult2= join(tables: {result:result, tag_time:tag_time},\r\n  on: [\"transaction\",\"testRun\"])\r\npesult = join(tables: {all:all, result2:result2},\r\n  on: [\"transaction\",\"testRun\"])\r\n  |>group()\r\n     |> sort(columns: [\"_time\"],desc:false)\r\n    |> map(fn: (r) => ({\r\n    APDEX_RATE: (float(v: r.tolerance_count)+(float(v:r.untolerance_count)/2.0))/float(v: r.total),\r\n    transaction: r.transaction,\r\n    test_name: r.testRun,\r\n    _time: r._time\r\n    }))\r\n    |> pivot(\r\n    rowKey:[\"transaction\",\"_time\"],\r\n    columnKey: [\"test_name\"],\r\n    valueColumn: \"APDEX_RATE\"\r\n  )\r\n  |>yield()\r\n\r\n  \r\n     \r\n\r\n\r\n\r\n\r\n\r\n",
+              "queryType": "randomWalk",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": []
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "fill": true,
+              "fillColor": "rgba(55, 135, 45, 0.3)",
+              "line": true,
+              "lineColor": "#37872D",
+              "op": "lt",
+              "value": 1,
+              "yaxis": "left"
+            },
+            {
+              "colorMode": "custom",
+              "fill": true,
+              "fillColor": "rgba(250, 222, 42, 0.21)",
+              "line": true,
+              "lineColor": "#FADE2A",
+              "op": "lt",
+              "value": 0.7,
+              "yaxis": "left"
+            },
+            {
+              "colorMode": "warning",
+              "fill": true,
+              "line": true,
+              "op": "lt",
+              "value": 0.5,
+              "yaxis": "left"
+            },
+            {
+              "colorMode": "critical",
+              "fill": true,
+              "fillColor": "rgba(51, 162, 229, 0.2)",
+              "line": true,
+              "lineColor": "rgba(31, 96, 196, 0.6)",
+              "op": "lt",
+              "value": 0.3,
+              "yaxis": "left"
+            }
+          ],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "APDEX ${test} value =  ${apdex} ms",
+          "tooltip": {
+            "shared": false,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "series",
+            "name": null,
+            "show": true,
+            "values": [
+              "total"
+            ]
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:287",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": "1",
+              "min": "0",
+              "show": true
+            },
+            {
+              "$$hashKey": "object:288",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "title": "Test Trends",
+      "type": "row"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [
+    "trends",
+    "links"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "jmeter",
+          "value": "jmeter"
+        },
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Data Source",
+        "multi": false,
+        "name": "data_source",
+        "options": [],
+        "query": "influxdb",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "perf_test_alum",
+          "value": "perf_test_alum"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Choose Project",
+        "multi": false,
+        "name": "test",
+        "options": [],
+        "query": "import \"influxdata/influxdb/schema\"\r\n\r\na = schema.tagValues(\r\n  bucket: \"jmeter\",\r\n  tag: \"application\"\r\n)\r\n|> filter(fn: (r) => r._value !~ /\\W/)\r\n|> yield()",
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "Load",
+          "value": "Load"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Choose type of test",
+        "multi": false,
+        "name": "type",
+        "options": [],
+        "query": "import \"strings\"\r\n\r\nfrom(bucket: \"jmeter\")\r\n  |> range(start: 2022-04-04T00:00:00Z, stop: now())\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"events\" and r[\"application\"]=~ /${test}/ and r[\"testType\"]=~ /.+/)\r\n  |> keep(columns: [\"testType\"])\r\n  |> distinct(column: \"_value\")\r\n  |> group(columns: [])\r\n  ",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2022-06-15T16:54:19Z",
+          "value": "2022-06-15T16:54:19Z"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "old test",
+        "multi": false,
+        "name": "old_test",
+        "options": [],
+        "query": "from(bucket: \"jmeter\")\r\n  |> range(start: 2022-04-04T00:00:00Z, stop: now())\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"events\" and r[\"application\"] == \"${test}\" and r[\"testType\"] =~/${type}/)\r\n  |> group()\r\n  |> sort(columns: [\"_time\"], desc: true)\r\n  |> keep(columns: [\"testRun\"])\r\n  |> limit(n:${limit})",
+        "refresh": 2,
+        "regex": "^(?!null).*$",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2022-06-15T16:54:19Z",
+          "value": "2022-06-15T16:54:19Z"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "new test",
+        "multi": false,
+        "name": "new_test",
+        "options": [],
+        "query": "from(bucket: \"jmeter\")\r\n  |> range(start: 2022-04-04T00:00:00Z, stop: now())\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"events\" and r[\"application\"] == \"${test}\" and r[\"testType\"] =~/${type}/)\r\n  |> group()\r\n  |> sort(columns: [\"_time\"], desc: true)\r\n  |> keep(columns: [\"testRun\"])\r\n  |> limit(n:${limit})",
+        "refresh": 2,
+        "regex": "^(?!null).*$",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "avg",
+          "value": "avg"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Choose metric to compare",
+        "multi": false,
+        "name": "metric",
+        "options": [],
+        "query": "import \"influxdata/influxdb/schema\"\r\n\r\nschema.fieldKeys(\r\n  bucket: \"jmeter\",\r\n  predicate: (r) => true,\r\n  start: -30d\r\n)",
+        "refresh": 1,
+        "regex": "/^(?!\\+Inf|\\d+?).*$/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "$data_source",
+        "definition": "",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": true,
+        "label": "cur_tests",
+        "multi": false,
+        "name": "cur_tests",
+        "options": [],
+        "query": "a = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"events\" and r[\"application\"] == \"${test}\" and r[\"testType\"]=~/${type}.*/)\r\n  |> group(columns: [\"_time\"])\r\n  |> keep(columns: [\"testRun\"])\r\n\r\n\r\njm = from(bucket: \"jmeter\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"jmeter\" and r[\"application\"] == \"${test}\" and r[\"_field\"]==\"avg\" and r[\"statut\"] == \"all\" and r[\"transaction\"] == \"all\")\r\n  |> count()\r\n  |> group(columns: [\"_time\"])\r\n\r\nout2 = jm |> filter(fn: (r) =>  r[\"_value\"]/1>${min_test_duration})\r\n  |> keep(columns: [\"testRun\"])\r\n  \r\njoin(tables:{a:a,out2:out2}, on:[\"testRun\"])\r\n",
+        "refresh": 2,
+        "regex": "^(?!null).*$",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "20",
+          "value": "20"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": "RPS_MAX_PROJ",
+        "name": "RPS_MAX",
+        "options": [
+          {
+            "selected": true,
+            "text": "20",
+            "value": "20"
+          }
+        ],
+        "query": "20",
+        "queryValue": "5",
+        "skipUrlSync": false,
+        "type": "constant"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "300",
+          "value": "300"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": "PCT90_AVG_PROJ",
+        "multi": false,
+        "name": "PCT90_AVG",
+        "options": [
+          {
+            "selected": true,
+            "text": "300",
+            "value": "300"
+          }
+        ],
+        "query": "300",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "4000",
+          "value": "4000"
+        },
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "apdex untolerance level",
+        "multi": false,
+        "name": "apdex",
+        "options": [
+          {
+            "selected": false,
+            "text": "4000",
+            "value": "4000"
+          }
+        ],
+        "query": "4000",
+        "queryValue": "12000",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "1",
+          "value": "1"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": null,
+        "name": "stability_mins",
+        "options": [
+          {
+            "selected": true,
+            "text": "1",
+            "value": "1"
+          }
+        ],
+        "query": "1",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "1",
+          "value": "1"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": null,
+        "name": "stress_mins",
+        "options": [
+          {
+            "selected": true,
+            "text": "1",
+            "value": "1"
+          }
+        ],
+        "query": "1",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "1",
+          "value": "1"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": "min_test_duration",
+        "name": "min_test_duration",
+        "options": [
+          {
+            "selected": true,
+            "text": "1",
+            "value": "1"
+          }
+        ],
+        "query": "1",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "5",
+          "value": "5"
+        },
+        "error": null,
+        "hide": 2,
+        "label": null,
+        "name": "send_interval",
+        "options": [
+          {
+            "selected": true,
+            "text": "5",
+            "value": "5"
+          }
+        ],
+        "query": "5",
+        "skipUrlSync": false,
+        "type": "constant"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "5s",
+          "value": "5s"
+        },
+        "error": null,
+        "hide": 0,
+        "label": null,
+        "name": "adjustment",
+        "options": [
+          {
+            "selected": false,
+            "text": "5s",
+            "value": "5s"
+          }
+        ],
+        "query": "5s",
+        "queryValue": "3s",
+        "skipUrlSync": false,
+        "type": "constant"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "100",
+          "value": "100"
+        },
+        "error": null,
+        "hide": 2,
+        "label": null,
+        "name": "limit",
+        "options": [
+          {
+            "selected": true,
+            "text": "100",
+            "value": "100"
+          }
+        ],
+        "query": "100",
+        "skipUrlSync": false,
+        "type": "constant"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Tests Trends NEW",
+  "uid": "ubn_P4WMk_new",
+  "version": 46
+}

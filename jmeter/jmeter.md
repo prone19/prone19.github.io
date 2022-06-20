@@ -5,7 +5,10 @@
 
 ### DSL Jmeter
 [https://habr.com/ru/company/otus/blog/653823/](https://habr.com/ru/company/otus/blog/653823/)
-[https://abstracta.github.io/jmeter-java-dsl/](https://abstracta.github.io/jmeter-java-dsl/)
+[https://abstracta.github.io/jmeter-java-dsl/](https://abstracta.github.io/jmeter-java-dsl/)  
+[https://github.com/abstracta/jmeter-java-dsl](https://github.com/abstracta/jmeter-java-dsl)  
+[https://abstracta.github.io/jmeter-java-dsl/guide/#java-api-performance-testing](https://abstracta.github.io/jmeter-java-dsl/guide/#java-api-performance-testing)  
+[https://github.com/grpc/grpc-java](https://github.com/grpc/grpc-java)  
 
 ### Try/catch jmeter
 [trycatch.jmx](TryCatch.jmx)
