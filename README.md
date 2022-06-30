@@ -20,6 +20,7 @@
 # Soft
 0. [Soft Articles](soft/soft)
 1. [minto-pyramid](https://untools.co/minto-pyramid)
+2.
 
 # DEVOPS
 ### Videos
