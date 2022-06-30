@@ -15,6 +15,7 @@
 12. [BigData](bd/bd)
 13. [Websockets](websockets/websockets)
 14. [Reporting](reporting/reporting)
+15. [Regex](grep)
 
 # Soft
 0. [Soft Articles](soft/soft)
