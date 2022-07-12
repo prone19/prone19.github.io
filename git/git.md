@@ -58,7 +58,6 @@ $ git branch -d release-1.2
 Deleted branch release-1.2 (was ff452fe).
 ```
 Hotfixes:
-![img](images/img_18.png)
 Created from master branch because develop branch could potentially have
 unstable functionality:
 ```
