@@ -99,6 +99,10 @@ Deleted branch hotfix-1.2.1 (was abbe5d6).
 
 ### Git commands
 ```
+1) git pull origin develop
+2) git rebase develop
+3) git push your_feature
+
 git branch
 git checkout master
 git checkout refactor/autoreport
