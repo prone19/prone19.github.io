@@ -50,6 +50,8 @@ id kok  # check user groups and etc
 su kok  # switch to user  kok
 
 last    # login history
+
+sudo su - # perform as the root user
 ```
 
 Groups
@@ -76,4 +78,50 @@ sudo sed -i -E 's/#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/
 sudo service ssh restart
 
 
+```
+# Provisioning
+Docker installation 
+```bash
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+echo "Installing Docker..."
+
+# Install pre-requisites
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+# Adding the GPG key for the official Docker repository
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Adding the Docker repository to APT sources
+# See available versions:
+# https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+# Update the package database with the Docker packages from the newly added repo
+sudo apt update
+
+# Install Docker from the officinal repository
+apt-cache policy docker-ce
+sudo apt install docker-ce -y
+
+# Ensure Docker it is enabled to start after reboot
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Add CI user to the docker group so it can run docker
+# sudo usermod -aG docker ciuser
+
+# Testing it works
+echo "Checking Docker service:"
+sudo systemctl status docker
+
+echo "Checking Docker version:"
+sudo docker version
+
+echo "Docker installed."
+```
+
+```bash
+# Adding user to docker group to avoid using sudo
+sudo usermod -aG docker ${USER}
+id ${USER} -nG
 ```
