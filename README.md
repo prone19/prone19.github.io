@@ -16,6 +16,7 @@
 13. [Websockets](websockets/websockets)
 14. [Reporting](reporting/reporting)
 15. [Regex](grep)
+16. [linux](linux/linux)
 
 # Soft
 0. [Soft Articles](soft/soft)
