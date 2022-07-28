@@ -2,6 +2,8 @@
 
 [Back to HOME](https://prone19.github.io/)
 
+1. [Python scripts](python_scripts)
+
 ## Python Crash Course notes
 ### Styling - Python Enhancement Proposal (PEP)
 1. use four spaces per indentation level (use tab but the editor should make them 'spaces')

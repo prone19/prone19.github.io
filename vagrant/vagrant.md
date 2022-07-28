@@ -17,7 +17,7 @@ The [Vagrantfile](Vagrantfile) is deploying Ubuntu 20.04 and
 4. To remove the box see [https://www.vagrantup.com/docs/cli/box#box-remove](https://www.vagrantup.com/docs/cli/box#box-remove)
 
 Sources:
-[https://github.com/hashicorp/vagrant/issues/7656](https://github.com/hashicorp/vagrant/issues/7656)
-[https://superuser.com/questions/161609/can-someone-explain-the-passwordauthentication-in-the-etc-ssh-sshd-config-fil/374234#374234](https://superuser.com/questions/161609/can-someone-explain-the-passwordauthentication-in-the-etc-ssh-sshd-config-fil/374234#374234)
-[http://novosial.org/openssh/publickey-auth/index.html](http://novosial.org/openssh/publickey-auth/index.html)
-[https://github.com/patrickdlee/vagrant-examples/blob/master/example4/Vagrantfile](https://github.com/patrickdlee/vagrant-examples/blob/master/example4/Vagrantfile)
+[https://github.com/hashicorp/vagrant/issues/7656](https://github.com/hashicorp/vagrant/issues/7656)  
+[https://superuser.com/questions/161609/can-someone-explain-the-passwordauthentication-in-the-etc-ssh-sshd-config-fil/374234#374234](https://superuser.com/questions/161609/can-someone-explain-the-passwordauthentication-in-the-etc-ssh-sshd-config-fil/374234#374234)  
+[http://novosial.org/openssh/publickey-auth/index.html](http://novosial.org/openssh/publickey-auth/index.html)  
+[https://github.com/patrickdlee/vagrant-examples/blob/master/example4/Vagrantfile](https://github.com/patrickdlee/vagrant-examples/blob/master/example4/Vagrantfile)  
